@@ -12,7 +12,17 @@ if (isset($_POST["val"]) and $_POST["val"]!="" ){
 
 		
 	date_default_timezone_set('America/Bogota');    
-	$date = date('Y-m-d h:i', time()); 
+	$date = date('Y-m-d h:i:s', time()); 
+
+	// se validan los lanzamientos
+	// 1 es para el ganador
+	// o para el perdedor
+	// si ambos tienen 0 se valida como un EMPATE
+
+	// en las opciones encontramos que
+	// 1 = PIEDRA
+	// 2 = PAPEL
+	// 3 = TIJERA
 
 	if ($value=='1' and $val_mq=='1') {
 		$user = 0;
@@ -75,6 +85,7 @@ if (isset($_POST["val"]) and $_POST["val"]!="" ){
 	?>
 
 	<hr>
+	<!-- Se imprimen los datos segun el arreglo de los lanzamientos o intentos -->
 	  <b>Usuario: </b> <?=$intentos[$value]?>
 	  <br>
 	  <b>Maquina: </b> <?=$intentos[$val_mq]?>

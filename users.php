@@ -1,6 +1,8 @@
 <?php
 include 'conexion.php';
 
+// consulta de usuarios
+
 $sql ="SELECT * FROM `user`";
 
 

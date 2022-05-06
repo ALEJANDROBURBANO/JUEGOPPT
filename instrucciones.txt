@@ -1,0 +1,5 @@
+1. importar la base de datos llamada "play" a mysql
+2. Cambiar los parametros de conexión, en el archivo parameters.php
+3. Tener su equipo conectado a internet, devido a que las librerias como boostrap, icons, y jQuery, no las descargue sino que solo las linkie.
+4. Crear un usuario si no tiene registrados
+5. Probar con un usuario, dando selección en una de las tres opciones, piedra, papel o tijera.

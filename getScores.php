@@ -4,6 +4,8 @@ include 'conexion.php';
 $id=$_POST["id"];
 $intentos = ['','PIEDRA','PAPEL','TIJERA'];
 
+// consulta de lanzamientos 
+
 $datas = "SELECT * from score where user_id=".$id." order by date desc";
 
 

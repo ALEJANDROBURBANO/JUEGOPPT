@@ -1,0 +1,48 @@
+show running M
+Configuración del edificio...  M
+M
+Configuración actual : 166931 bytes M
+!  M
+! Último cambio de configuración a las 17:30:29 Co jue jul 19 2012 por esalgado M
+! NVRAM config última actualización en 23:41:23 Co Sun 22 jul 2012 M
+!  M
+versión 12.2 M
+no hay plataforma de servicio M
+service timestamps debug datetime msec localtime^M
+service timestamps log datetime msec localtime^M
+servicio de cifrado de contraseñas M
+servicio compress-config M
+!  M
+hostname villavicencio M
+
+ip vrf AvalBogAVV M
+ rd 100:16003 M
+ mapa de exportación ARCOM-AVAL M
+ route-target export 100:16003^M
+ route-target import 100:16003^M
+ route-target import 14080:2000^M
+ route-target import 14080:27300^M
+!  M
+ip vrf AvalBogBOCis M
+ rd 100:16001 M
+ mapa de exportación ARCOM-AVAL M
+ route-target export 100:16001^M
+ route-target export 100:830^M
+ route-target import 100:16001^M
+ route-target import 100:830^M
+ route-target import 14080:27300^M
+!  M
+ip vrf AvalBogBOC M
+ rd 100:16005 M
+ mapa de exportación ARCOM-BOC M
+ route-target export 100:16005^M
+ route-target import 100:16005^M
+ route-target import 14080:300400^M
+!  M
+ip vrf AvalBogBPO M
+ rd 100:16004 M
+ mapa de exportación ARCOM-AVAL M
+ route-target export 100:16004^M
+ route-target import 100:16004^M
+ route-target import 14080:27300^M
+!  M

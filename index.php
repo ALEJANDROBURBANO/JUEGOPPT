@@ -14,6 +14,8 @@
 	</style>
 	<body id="load">
 		<div class="col-12" style="text-align: center; background-color: #49599a; padding: 20px; color: white" >
+			<a href="./interface/index.php"><button class="btn btn-secondary" style="float: right;">INTERFACEMAP CISCO</button></a>
+
 			<h2>PlayPPT</h2>
 			<h5>Juego de piedra, papel o tijera</h5>
 		</div>
@@ -38,6 +40,8 @@
 
 				<script>
 
+				// obtener usuarios registrados
+
 				$(document).ready(function(){
 					$('.load').click(function(){
 				    $.ajax({
@@ -50,6 +54,8 @@
 				    });
 				});
 				});
+
+				// obtener dato del usuario seleccionado
 
 				function getDataUser(id){
 
@@ -69,6 +75,8 @@
 
 				}
 
+				// obtener registros de lanzamientos
+
 				function getScores(id){
 
 					var values = {
@@ -86,6 +94,8 @@
 				    });
 
 				}
+
+				// guardar usuario
 
 				function saveUser(name){
 				        var parametros = {
@@ -111,7 +121,7 @@
 
 				<div class="input-group">
 		        	<div class="input-group-prepend">
-		          		<input type="text" name="name" id="name" class="form-control">
+		          		<input type="text" placeholder="Escriba el nombre aquí..." name="name" id="name" class="form-control">
 		        	</div>
 		        	<button class="btn btn-primary"  onclick="saveUser($('#name').val());return false;">CREAR USUARIO</button>
 		      	</div>
@@ -131,3 +141,5 @@
 
 	</body>
 </html>
+
+<?php

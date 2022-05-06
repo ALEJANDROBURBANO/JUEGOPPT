@@ -5,15 +5,16 @@ include 'conexion.php';
 if (isset($_POST["name"]) and $_POST["name"]!="" ){
 
 	//traspasamos a variables locales, para evitar complicaciones con las comillas:
-	$name = $_POST["name"];
+	$vrf = $_POST["vrf"];
+	$map = $_POST["map"];
 
-	//Preparamos la orden SQL de inserción del usuario
-	$sql = "INSERT INTO user (name) VALUES ('$name')";
+	//Preparamos la orden SQL
+	$sql = "interfacemap(vrf, export_map) VALUES ($vrf,$map)";
 
-	//Aqui ejecutaremos la orden
+	//Aqui ejecutaremos esa orden
 	mysqli_query($mysql, $sql);
 
-	echo "Usuario guardado con exito, por favor seleccionelo de la lista de usuarios";
+	echo "Datos guardados con exito.";
 
 	} else {
 
